@@ -27,8 +27,8 @@ export default function Lists() {
   return (
     <>
     <div id="table"  >
-     {fetchD.map((user)=>{
-       return <div className='boxx' >
+     {fetchD.map((user ,id)=>{
+       return <div className='boxx' key={id} >
        <div id="image">
          <img src={user.avatar} ></img>
        </div>
