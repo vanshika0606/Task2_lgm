@@ -10,14 +10,14 @@ export default function Loader() {
   return (
     <>
     <div>
-     {/* <div id="box">
+     <div id="box">
       <div id="load" >
                  
       </div>
-    </div> */}
-        <Lists/>
+    </div>
     </div>
     
+    <Lists/>
      
     </>
   )
