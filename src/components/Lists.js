@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function Lists() {
   
+  
 
    const [fetchD,setfetchD]=useState([]);
    useEffect(()=>{
@@ -10,18 +11,24 @@ export default function Lists() {
       
          const res= await fetch(url);
          const json= await res.json();
-         setfetchD(json.data);
+        setfetchD(json.data);
 
       
      };
-     fetchData();
+     setTimeout( ()=>{
+      fetchData();
+      },4000);
+     
+     
    },[]);
+   
+   
 
   return (
     <>
-    <div id="table">
-     {fetchD.map((user,id)=>{
-       return <div className='boxx' key={id}>
+    <div id="table"  >
+     {fetchD.map((user)=>{
+       return <div className='boxx' >
        <div id="image">
          <img src={user.avatar} ></img>
        </div>
